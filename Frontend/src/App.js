@@ -1,16 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./Login";
-import Register from "./Register";
-/*************  ✨ Windsurf Command ⭐  *************/
+import Login from "./Pages/Login/Login";
+import Register from "./Pages/Register/Register";
+import ForgotPassword from "./Pages/Password/ForgotPassword";
+import ResetPassword from "./Pages/Password/ResetPassword";
 
-/*******  90c13c69-44dc-4022-9348-7787ac3af94f  *******/
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Register />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/password/:requestId" element={<ResetPassword />} />
       </Routes>
     </Router>
   );

@@ -16,7 +16,7 @@ const resetPasswordRouter = require("./route/resetPasswordRouter");
 app.use("/auth", authRoutes);
 app.use("/reset-password", resetPasswordRouter);
 sequelize
-  .sync()
+  .sync({ alter: true })
   .then(() => {
     app.listen(process.env.PORT || 4000, () => {
       console.log(

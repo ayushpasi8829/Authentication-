@@ -25,7 +25,7 @@ function App() {
   };
 
   const handleLoginClick = () => {
-    navigate("/login");
+    navigate("/");
   };
 
   const handleSubmit = async (e) => {
