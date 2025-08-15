@@ -16,7 +16,7 @@ const ForgotPassword = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:4000/reset-password/sendMail",
+        `${process.env.REACT_APP_API_URL}reset-password/sendMail`,
         {
           method: "POST",
           headers: {

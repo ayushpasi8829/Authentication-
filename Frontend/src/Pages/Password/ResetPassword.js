@@ -21,7 +21,7 @@ const ResetPassword = () => {
   const validateResetLink = async () => {
     try {
       const response = await fetch(
-        `http://localhost:4000/reset-password/verify?requestId=${requestId}`
+        `${process.env.REACT_APP_API_URL}reset-password/verify?requestId=${requestId}`
       );
       const data = await response.json();
 
@@ -51,7 +51,7 @@ const ResetPassword = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:4000/reset-password/resetPassword",
+        "${process.env.REACT_APP_API_URL}reset-password/resetPassword",
         {
           method: "POST",
           headers: {
